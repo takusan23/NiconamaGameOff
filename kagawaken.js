@@ -32,5 +32,5 @@ window.onload = () => {
     }, 500)
     // あと「エモーションボタン」を非表示にする
     const emotionButton = document.getElementsByClassName('___emotion-button___1Rolf ___button___Re8M9')[0]
-    emotionButton.style.display = 'none'
+    // emotionButton.style.display = 'none'
 }
