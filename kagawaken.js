@@ -4,7 +4,7 @@
  */
 window.onload = () => {
     // 設定を開く
-    const settingButton = document.getElementsByClassName('___setting-button___2e-c9')[0]
+    const settingButton = document.getElementsByClassName('___toggle-button___20BQt ___setting-button___HHUPl')[0]
     settingButton.click()
     // 詳細設定を開く
     const showMoreSettingPanel = document.getElementsByClassName('___detail-setting-button___2t57H ___detail-setting-button___2m9Nn')[0]
@@ -31,6 +31,6 @@ window.onload = () => {
         closeMoreSettingPanel.click()
     }, 500)
     // あと「エモーションボタン」を非表示にする
-    const emotionButton = document.getElementsByClassName('___emotion-button___1Rolf ___button___Re8M9')[0]
+    // const emotionButton = document.getElementsByClassName('___emotion-button___1Rolf ___button___Re8M9')[0]
     // emotionButton.style.display = 'none'
 }
