@@ -28,7 +28,7 @@ window.onload = () => {
             console.log(`未ログイン時でニコ生ゲームを無効にする：${notLoginGameOffSwitch.getAttribute('aria-pressed')}`)
         }
         // 閉じるボタンを押す
-        const closeMoreSettingPanel = document.getElementsByClassName('___close-button___iudt8 ___close-button___2x2lj')[0]
+        const closeMoreSettingPanel = Array.from(document.getElementsByTagName('button')).filter((element) => element.className.match('close') && element.className.match('button'))[0]
         closeMoreSettingPanel.click()
     }, 500)
     // あと「エモーションボタン」を非表示にする
