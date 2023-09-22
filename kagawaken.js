@@ -11,8 +11,8 @@ window.onload = () => {
     showMoreSettingPanel.click()
     // なんか遅延させないと動かないので・・？
     setTimeout(() => {
-        // ゲーム・ギフト・エモーション演出を非表示にする の要素
-        const niconamaGameOffLabelId = Array.from(document.getElementsByTagName('label')).find(label => label.textContent === 'ゲーム・ギフト・エモーション演出を非表示にする').getAttribute('for');
+        // ゲーム・ギフト・エモーション演出を表示 の要素
+        const niconamaGameOffLabelId = Array.from(document.getElementsByTagName('label')).find(label => label.textContent === 'ゲーム・ギフト・エモーション演出を表示').getAttribute('for');
         const niconamaGameOffSwitch = document.getElementById(niconamaGameOffLabelId);
         // 演出非表示OFFのときだけONにする
         if (niconamaGameOffSwitch !== undefined && niconamaGameOffSwitch.getAttribute('aria-pressed') === 'false') {
@@ -28,7 +28,7 @@ window.onload = () => {
             console.log(`未ログイン時でニコ生ゲームを無効にする：${notLoginGameOffSwitch.getAttribute('aria-pressed')}`)
         }
         // 閉じるボタンを押す
-        const closeMoreSettingPanel = Array.from(document.getElementsByTagName('button')).filter((element) => element.className.match('close') && element.className.match('button'))[0]
+        const closeMoreSettingPanel = Array.from(Array.from(document.getElementsByTagName('h2')).find(label => label.textContent === '詳細設定').parentNode.children).filter((element) => element.className.match('button'))[0]
         closeMoreSettingPanel.click()
     }, 500)
     // あと「エモーションボタン」を非表示にする
