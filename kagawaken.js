@@ -14,18 +14,12 @@ window.onload = () => {
         // ゲーム・ギフト・エモーション演出を表示 の要素
         const niconamaGameOffLabelId = Array.from(document.getElementsByTagName('label')).find(label => label.textContent === 'ゲーム・ギフト・エモーション演出を表示').getAttribute('for');
         const niconamaGameOffSwitch = document.getElementById(niconamaGameOffLabelId);
-        // 演出非表示OFFのときだけONにする
-        if (niconamaGameOffSwitch !== undefined && niconamaGameOffSwitch.getAttribute('aria-pressed') === 'false') {
+        // 演出表示 ON のときだけ OFF にする
+        if (niconamaGameOffSwitch && niconamaGameOffSwitch.getAttribute('aria-pressed') === 'true') {
             // 押す
             niconamaGameOffSwitch.click()
             // 結果
-            console.log(`ニコ生ゲームを無効にする：${niconamaGameOffSwitch.getAttribute('aria-pressed')}`)
-        } else {
-            // 無いとき
-            const notLoginGameOffSwitch = document.getElementsByClassName('___target___1Oicc ___target___21D1y')[3]
-            notLoginGameOffSwitch.click()
-            // 結果
-            console.log(`未ログイン時でニコ生ゲームを無効にする：${notLoginGameOffSwitch.getAttribute('aria-pressed')}`)
+            console.log(`ニコ生ゲームの表示：${niconamaGameOffSwitch.getAttribute('aria-pressed')}`)
         }
         // 閉じるボタンを押す
         const closeMoreSettingPanel = Array.from(Array.from(document.getElementsByTagName('h2')).find(label => label.textContent === '詳細設定').parentNode.children).filter((element) => element.className.match('button'))[0]
