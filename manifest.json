@@ -1,7 +1,7 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "NiconamaGameOff",
-    "version": "1.0.7",
+    "version": "1.1.0",
     "author": "takusan_23",
     "description": "ニコ生の「ゲーム・ギフト・エモーション演出を表示」の設定が永続化しないので自動でオフにする機能。",
     "icons": {
